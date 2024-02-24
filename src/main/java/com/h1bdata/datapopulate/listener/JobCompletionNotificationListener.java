@@ -14,7 +14,7 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 
     @Override
     public void beforeJob(JobExecution jobExecution) {
-        log.info("Job Started...");
+        log.info("Insert Job Started...");
     }
 
     @Override
@@ -22,7 +22,7 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
         if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
             log.info("Job Completed Successfully...");
         } else if (jobExecution.getStatus() == BatchStatus.FAILED) {
-            log.error("Job Failed...");
+            log.error("Insert Job Failed...");
         }
     }
 }
